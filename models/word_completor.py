@@ -56,7 +56,7 @@ class WordCompletor:
         """
         
         self.word_probs = {}
-        vocabulary = []
+        self.vocabulary = []
         self.total_words = 0
 
         for text in corpus:
@@ -64,13 +64,13 @@ class WordCompletor:
                 self.total_words += 1
                 if word not in self.word_probs:
                     self.word_probs[word] = 0
-                    vocabulary.append(word)
+                    self.vocabulary.append(word)
                 self.word_probs[word] += 1
 
         for word in self.word_probs:
             self.word_probs[word] /= self.total_words
 
-        self.prefix_tree = PrefixTree(vocabulary=vocabulary)
+        self.prefix_tree = PrefixTree(vocabulary=self.vocabulary)
 
     def get_words_and_probs(self, prefix: str) -> (List[str], List[float]):
         """

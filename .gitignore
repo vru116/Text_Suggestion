@@ -1,7 +1,8 @@
 # Byte-compiled / optimized / DLL files
 data/
-
-
+hw1_n_gram_generaiton.ipynb
+Text Suggestion.docx
+Рублева Виталия Text Suggestion.mkv
 
 __pycache__/
 *.py[codz]
