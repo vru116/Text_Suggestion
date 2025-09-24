@@ -74,5 +74,4 @@ class TextSuggestion:
         suggestions = sorted(suggestions.items(), key=lambda x: x[1], reverse=True)
         suggestions = dict(suggestions)
         suggestions = [sug.split() for sug in suggestions.keys()]
-        # suggestions = [list(cur_text[index_of_begin:]) for cur_text in cur_beams.keys()]
         return suggestions
